@@ -15,7 +15,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    height: 15%;
+    height: 100px;
     background-color: white;
 }
 
@@ -108,7 +108,7 @@ main {
 .ads-right div {
     margin-bottom: 10px;
     width: 240px;
-    height: 240px;
+    height: 400px;
     background-color: white;
     border-radius: 10px;
     
@@ -165,8 +165,7 @@ main {
 .many-ads {
     width: 1024px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -178,7 +177,8 @@ main {
     justify-content: center;
     align-items: center;
 
-    height: 240px;
+    width: 336px;
+    height: 280px;
 }
 
 .many-ads div span {
