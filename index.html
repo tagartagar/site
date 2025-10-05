@@ -1,0 +1,162 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Путеводитель по Бурятии</title>
+
+    <script>
+    function CBR_XML_Daily_Ru(rates) {
+        function trend(current, previous) {
+            if (current > previous) return ' ▲';
+            if (current < previous) return ' ▼';
+            return '';
+        }
+
+        var USDrate = rates.Valute.USD.Value.toFixed(4).replace('.', ',');
+        var USD = document.getElementById('USD');
+        USD.innerHTML = USD.innerHTML.replace('00,0000', USDrate);
+        USD.innerHTML += trend(rates.Valute.USD.Value, rates.Valute.USD.Previous);
+
+        var EURrate = rates.Valute.EUR.Value.toFixed(4).replace('.', ',');
+        var EUR = document.getElementById('EUR');
+        EUR.innerHTML = EUR.innerHTML.replace('00,0000', EURrate);
+        EUR.innerHTML += trend(rates.Valute.EUR.Value, rates.Valute.EUR.Previous);
+    }
+    </script>
+    <link rel="dns-prefetch" href="https://www.cbr-xml-daily.ru/" />
+    <script src="http://www.cbr-xml-daily.ru/daily_jsonp.js" async></script>
+</head>
+<body>
+    <div class="ad"><span>Реклама</span></div>
+    <div class="header-wrapper">
+        <div class="header-top">
+            <div class="footer-logo">
+                <div class="logo">Путеводитель по Бурятии</div>
+                <div style="margin-top: 5px; color: rgba(255, 255, 255, 0.6); font-size: 16px;"><i><b>Пространство впечатлений</b></i></div>
+            </div>
+            <div class="weather-block">
+                <div>Улан-Удэ</div>
+                <div>10 &deg;C</div>
+            </div>
+            <div class="weather-block">
+                <div id="USD">USD 00,0000</div>
+                <div id="EUR">EUR 00,0000</div>
+                <div style="font-size: 10px; text-align: right;">
+                    <a style="color: rgba(255, 255, 255, 0.6);" href="https://cbr.ru/currency_base/daily/">ЦБ РФ</a>
+                </div>
+            </div>
+            <div style="color: rgba(255, 255, 255, 0.6);">
+                Рекламная служба
+                <br>
+                <b>+0 000 000 00 00</b>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div><a href="placeholder.html">Транспорт</a></div>
+            <div><a href="placeholder.html">Жильё</a></div>
+            <div><a href="placeholder.html">Еда</a></div>
+            <div><a href="placeholder.html">Афиша</a></div>
+            <div><a href="placeholder.html">Здоровье</a></div>
+            <div><a href="placeholder.html">Отдых</a></div>
+            <div><a href="placeholder.html">Бытовые услуги</a></div>
+        </div>
+        <div class="header-nav">
+            <div><a href="placeholder.html">Гороскоп Зурхай</a></div>
+            <div><a href="placeholder.html">Знакомства</a></div>
+            <div><a href="placeholder.html">Религия</a></div>
+            <div><a href="placeholder.html">Спорт</a></div>
+            <div><a href="placeholder.html">История</a></div>
+            <div><a href="placeholder.html">Фотобанк</a></div>
+            <div><a href="placeholder.html">Некрологи</a></div>
+        </div>
+    </div>
+    <main>
+        <div>
+            <div class="news">
+                <div><a href="#">В Улан-Удэ выступит звезда фортепианного искусства Илья Папоян</a></div>
+                <div><a href="#">Ансамбль песни и танца «Донбасс» выступит в Улан-Удэ уже в эту пятницу</a></div>
+                <div><a href="#">"Тропа здоровья" на Верхней Берёзовке начнёт встречать любителей экотуризма</a></div>
+                <div><a href="#">Игорь Шутенков: «ТЭЦ-2 полностью обеспечит Улан-Удэ теплом и электричеством»</a></div>
+                <div><a href="#">Бурятия получит ещё 245 млн рублей на очистные сооружения Улан-Удэ</a></div>
+                <div><a href="#">В Улан-Удэ начали возводить четвёртый этаж первого дома квартала «Улаан Хото»</a></div>
+                <div><a href="#">Бурятский театр оперы и балета готовит премьеру сказки «Аленький цветочек»</a></div>
+            </div>
+            <div class="stories">
+                <div class="story">
+                    <img src="mock1.jpg">
+                    <div class="story-category">сельское хозяйство</div>
+                    <div class="story-title">В Улан-Удэ разыграют племенного жеребца и баранов бурятской породы</div>
+                    <div class="story-meta">13 сентября</div>
+                </div>
+                <div class="story">
+                    <img src="mock3.jpg">
+                    <div class="story-category">туризм</div>
+                    <div class="story-title">Вернулся в республику из Москвы и решил вложить большие деньги в туркомплекс</div>
+                    <div class="story-meta">13 сентября</div>
+                </div>
+                <div class="story">
+                    <img src="mock2.jpg">
+                    <div class="story-category">безопасность</div>
+                    <div class="story-title">В Бурятии прошли антитеррористические учения</div>
+                    <div class="story-meta">13 сентября</div>
+                </div>
+                <div class="story">
+                    <img src="mock4.jpg">
+                    <div class="story-category">культура</div>
+                    <div class="story-title">Актёр из Бурятии сыграл злодея в фильме про медвежонка Умку</div>
+                    <div class="story-meta">13 сентября</div>
+                </div>
+            </div>
+        </div>
+        <div class="ads-right">
+            <div><span>Реклама</span></div>
+            <div><span>Реклама</span></div>
+            <div><span>Реклама</span></div>
+            <div><span>Реклама</span></div>
+            <div><span>Реклама</span></div>
+        </div>
+    </main>
+    <div class="many-ads">
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+    </div>
+    <div class="video-block">
+        <div class="video">
+            <div class="video-suptitle">видео</div>
+            <img src="video1.png">
+            <div class="video-title">Настала пора определиться с выбором профессии</div>
+        </div>
+        <div class="video">
+            <div class="video-suptitle">видео</div>
+            <img src="video2.png">
+            <div class="video-title">День с чемпионом</div>
+        </div>
+    </div>
+    <div class="many-ads">
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+        <div><span>Реклама</span></div>
+    </div>
+    <footer>
+        <div class="header-top">
+            <div class="footer-logo">
+                <div class="logo">Путеводитель по Бурятии</div>
+                <div style="margin-top: 10px; color: rgba(255, 255, 255, 0.6);">Макет сайта</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
